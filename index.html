@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Azure function data test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="./fonts/VIC-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/VIC-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/VIC-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/VIC-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <div id="__layout">
+            <div class="rpl-site-layout">
+                <div id="rpl-skip-link" class="rpl-skip-link"><a href="#rpl-main" class="rpl-skip-link__link">Skip to
+                        main content</a></div>
+
+                <!-- #1 HEADER: blue header bar across top -->
+                <header class="rpl-site-header-container">
+                    <div class="client-only-placeholder">
+                        <div>
+                            <div tabIndex="-1" aria-hidden="true"></div>
+                            <div tabIndex="-1" aria-hidden="true"></div>
+                            <div data-lock="">
+                                <div class="rpl-site-header">
+                                    <div class="rpl-site-header__inner">
+                                        <div class="rpl-site-header__top">
+                                            <div class="rpl-site-header__logo-container">
+                                                <div class="rpl-site-header__logo-container-inner">
+                                                    <button aria-label="Menu" aria-expanded="false"
+                                                        class="rpl-site-header__btn rpl-site-header__btn--menu">
+                                                        <svg viewBox="0 0 18 14" aria-hidden="true" overflow="visible"
+                                                            class="rpl-icon rpl-icon--hamburger rpl-icon--color_white"
+                                                            style="width:18px;height:14px;">
+                                                            <path
+                                                                d="M0 1a1 1 0 011-1h8a1 1 0 110 2H1a1 1 0 01-1-1zM0 5a1 1 0 011-1h16a1 1 0 110 2H1a1 1 0 01-1-1zM0 9a1 1 0 011-1h12a1 1 0 110 2H1a1 1 0 01-1-1zM0 13a1 1 0 011-1h16a1 1 0 110 2H1a1 1 0 01-1-1z">
+                                                            </path>
+                                                        </svg>
+                                                        <span>Menu</span>
+                                                    </button>
+                                                    <div
+                                                        class="rpl-site-header__divider rpl-site-header__divider--vic rpl-site-header__divider--110">
+                                                    </div>
+                                                    <div
+                                                        class="rpl-site-header__title rpl-site-header__logo-container--vic-logo-primary">
+                                                        <a href="/" data-print-url="http://www.vic.gov.au/"
+                                                            class="rpl-link rpl-link--nuxt nuxt-link-active">
+                                                            <span class="rpl-link__inner"><img
+                                                                    src="./images/logo-primary.png"
+                                                                    alt="Victoria government logo"></span>
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                        class="rpl-site-header__divider rpl-site-header__divider--cobrand rpl-site-header__divider--110">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="search-container" class="rpl-site-header__btn-container"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div tabIndex="-1" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                </header>
+
+                <div>
+                    <main class="rpl-page app-main">
+                        <!-- #2. ABOVE CONTENT SECTION: contains breadcrumb nav and banner at top of page-->
+                        <div class="rpl-above-content">
+                            <div class="rpl-page-header rpl-page-header--with-image">
+                                <!-- #2a. Banner image: with src file set using script at end of page -->
+                                <img alt="" height="600" width="1600" sizes="100vw"
+                                    class="rpl-responsive-image rpl-page-header__picture rpl-responsive-image--fit-cover"
+                                    style="object-position:50.00% 50.00%;font-family:'object-fit: cover; object-position: 50.00% 50.00%;';">
+
+                                <div class="rpl-above-content__inner">
+                                    <!-- #2b. Navigation: breadcrumb navigation (second from top top) -->
+                                    <div class="rpl-above-content__top">
+                                        <div class="rpl-breadcrumbs">
+                                            <div class="rpl-breadcrumbs__row">
+                                                <nav aria-label="breadcrumbs">
+                                                    <ul class="rpl-breadcrumbs__items">
+                                                        <li class="rpl-breadcrumbs__item--mobile">
+                                                            <a href="/environment-water-and-energy"
+                                                                data-print-url="http://www.vic.gov.au/environment-water-and-energy"
+                                                                class="rpl-link rpl-link--nuxt rpl-breadcrumbs__link">
+                                                                <span class="rpl-link__inner">
+                                                                    <svg viewBox="0 0 15 9" aria-hidden="true"
+                                                                        overflow="visible"
+                                                                        class="rpl-icon rpl-icon--arrow_down_tertiary"
+                                                                        style="width:15px;height:9px;">
+                                                                        <path
+                                                                            d="M.44.44a1.5 1.5 0 012.12 0L7.5 5.378l4.94-4.94a1.5 1.5 0 012.12 2.122l-6 6a1.5 1.5 0 01-2.12 0l-6-6a1.5 1.5 0 010-2.122z">
+                                                                        </path>
+                                                                    </svg>
+                                                                    <span class="rpl-visually-hidden">Return to
+                                                                        Environment, water and energy</span> <span
+                                                                        aria-hidden="true">Environment, water and
+                                                                        en...</span>
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="rpl-breadcrumbs__item--desktop">
+                                                            <a href="http://www.vic.gov.au/" data-print-url=""
+                                                                class="rpl-link rpl-link--nuxt rpl-breadcrumbs__link nuxt-link-active">
+                                                                <span class="rpl-link__inner">Home</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="rpl-breadcrumbs__item--desktop">
+                                                            <a href="http://www.vic.gov.au/information-and-services"" data-print-url="" class="
+                                                                rpl-link rpl-link--nuxt rpl-breadcrumbs__link">
+                                                                <span class="rpl-link__inner">Information and
+                                                                    services</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="rpl-breadcrumbs__item--desktop">
+                                                            <a href="http://www.vic.gov.au/environment-water-and-energy"
+                                                                data-print-url=""
+                                                                class="rpl-link rpl-link--nuxt rpl-breadcrumbs__link">
+                                                                <span class="rpl-link__inner">Environment, water and
+                                                                    energy</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="rpl-breadcrumbs__item--desktop">
+                                                            <a href="https://www.vic.gov.au/strengthening-our-waste-and-recycling-system"
+                                                                data-print-url=""
+                                                                class="rpl-link rpl-link--nuxt rpl-breadcrumbs__link">
+                                                                <span class="rpl-link__inner">Recycling Victoria</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="rpl-breadcrumbs__item--desktop">
+                                                            <a href="https://sv-azs-wdt-prd-dwa-app-staging.azurewebsites.net/"
+                                                                data-print-url=""
+                                                                class="rpl-link rpl-link--nuxt rpl-breadcrumbs__link">
+                                                                <span class="rpl-breadcrumbs__text ">Waste Data
+                                                                    Hub</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="rpl-breadcrumbs__item--desktop">
+                                                            <a href="/" data-print-url=""
+                                                                class="rpl-link rpl-link--nuxt rpl-breadcrumbs__link">
+                                                                <span
+                                                                    class="rpl-breadcrumbs__text data-hub-section__label"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="rpl-breadcrumbs__item--desktop">
+                                                            <span
+                                                                class="rpl-breadcrumbs__text data-hub-product__label"></span>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- #2c. Banner content including title: set using the script at the end of this page -->
+                                    <div id="rpl-main" class="rpl-above-content__below">
+                                        <div
+                                            class="rpl-hero-banner rpl-site-constrain--on-all rpl-hero-banner--no-links">
+                                            <div class="rpl-row">
+                                                <div class="rpl-hero-banner__left">
+                                                    <h1 class="rpl-hero-banner__title"><span>​</span></h1>
+                                                    <p class="rpl-hero-banner__description"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rpl-above-content-two"></div>
+                        </div>
+
+
+                        <!-- #3. MAIN CONTENT SECTION: contains breadcrumb nav and banner at top of page -->
+                        <section id="rpl-main-content" class="rpl-content rpl-content--with-sidebar">
+
+                            <div class="rpl-site-constrain--on-all">
+                                <!-- PLACEHOLDER EXAMPLE: FIRST SECTION WITH POWER BI EMBED -->
+                                <div class="rpl-row">
+                                    <!-- Example of 7 unit wide content block -->
+                                    <div class="rpl-main rpl-col rpl-col--full rpl-col--7-l">
+                                        <div
+                                            class="rpl-row app-content tide-content tide-content--landing-page rpl-row--gutter">
+                                            <div class="rpl-col rpl-col--full">
+                                                <h2>About this test</h2>
+                                                <p>Data response:</p>
+                                                <div class='response-container'>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                                <div class="rpl-row">
+
+                                </div>
+
+                            </div>
+                        </section>
+
+
+                        <!-- #4. BELOW CONTENT SECTION: contains feedback question and other forms: not expected to be used -->
+                        <div class="rpl-below-content">
+                            <div class="app-content-rating tide-content-rating rpl-site-constrain--on-all">
+
+                            </div>
+                        </div>
+
+                    </main>
+                </div>
+
+                <!-- #5. FOOTER: with JS powered dropdown anv commented out -->
+                <footer class="rpl-site-footer-container">
+                    <div class="rpl-site-footer">
+                        <div class="rpl-site-footer__main">
+                            <div class="rpl-acknowledgement rpl-site-footer__acknowledgement"><img
+                                    src="./images/aboriginal-flag.png" alt="Aboriginal flag"
+                                    class="rpl-acknowledgement__flag"> <img
+                                    src="./images/torres-strait-islander-flag.png" alt="Torres Strait Islander flag"
+                                    class="rpl-acknowledgement__flag">
+                                <div class="rpl-acknowledgement__text">The Victorian Government acknowledges Aboriginal
+                                    Traditional Owners of Country throughout Victoria and pays respect to their cultures
+                                    and Elders past, present and emerging.</div>
+                            </div>
+
+                        </div>
+                        <div class="rpl-site-footer__bottom">
+                            <div class="rpl-site-footer__bottom-main">
+                                <div class="rpl-links-and-copyright">
+                                    <ul class="rpl-links-and-copyright__links">
+                                        <li><a href="/privacy-vicgovau"
+                                                data-print-url="http://www.vic.gov.au/privacy-vicgovau"
+                                                class="rpl-link rpl-link--nuxt"><span
+                                                    class="rpl-link__inner">Privacy</span></a> </li>
+                                        <li><a href="/disclaimer-0" data-print-url="http://www.vic.gov.au/disclaimer-0"
+                                                class="rpl-link rpl-link--nuxt"><span
+                                                    class="rpl-link__inner">Disclaimer</span></a></li>
+                                        <li><a href="/copyright" data-print-url="http://www.vic.gov.au/copyright"
+                                                class="rpl-link rpl-link--nuxt"><span
+                                                    class="rpl-link__inner">Copyright</span></a></li>
+                                        <li><a href="/accessibility"
+                                                data-print-url="http://www.vic.gov.au/accessibility"
+                                                class="rpl-link rpl-link--nuxt"><span
+                                                    class="rpl-link__inner">Accessibility</span></a></li>
+                                        <li><a href="https://vic.gov.au/sitemap"
+                                                data-print-url="https://vic.gov.au/sitemap" class="rpl-link"><span
+                                                    class="rpl-link__inner">Sitemap</span></a></li>
+                                        <li><a href="/contact-us" data-print-url="http://www.vic.gov.au/contact-us"
+                                                class="rpl-link rpl-link--nuxt"><span class="rpl-link__inner">Contact
+                                                    us</span></a></li>
+                                    </ul>
+                                    <div class="rpl-links-and-copyright__copyright">
+                                        <p>© Copyright State Government of Victoria</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rpl-site-footer__logos">
+                                <a href="https://vic.gov.au" data-print-url="https://vic.gov.au"
+                                    class="rpl-link rpl-site-footer__logo">
+                                    <span class="rpl-link__inner"><img src="./images/vic-logo.svg"
+                                            alt="Victoria – logo – Victoria Government - home"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCRIPT: for more easily setting title -->
+    <script>
+        // General page setup
+        const settings = {
+            title: `Azure function test page `,
+            description: ``,
+            bannerImg: `RV_Website_Hero Image.png`,
+            hubSection: `Name of data hub section`
+        }
+
+        // Set title and subtitle and banner image
+        document.querySelector('.data-hub-section__label').innerHTML = settings.hubSection
+        document.querySelector('.rpl-hero-banner__title span').innerHTML = settings.title
+        document.querySelector('.data-hub-product__label').innerHTML = settings.title
+        document.querySelector('.rpl-hero-banner__description').innerHTML = settings.description
+        document.querySelector('.rpl-page-header__picture').setAttribute('src', `./images/${settings.bannerImg}`)
+
+
+        ///// ACCESS AZURE FUNCTION  ///
+        const functionURL = 'https://market-bulletin-data.azurewebsites.net/api/HttpTrigger' 
+        console.log(window.location.host)
+        renderData()
+
+        async function renderData(){
+            const data = await fetchData(functionURL)
+            document.querySelector('.response-container').innerHTML = data.message
+            console.log(data)
+        } 
+
+
+        async function fetchData(url){
+            console.log(url)
+            return fetch(url, {
+                    method:         'POST',                     // *GET, POST, PUT, DELETE, etc.
+                    mode:           'cors',                     // no-cors, *cors, same-origin
+                    cache:          'default',                 // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials:    'same-origin',             // include, *same-origin, omit
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Credentials': true
+                    },
+                    body:{
+                        tables:   ['mrfOutput', 'materialsVicExport', 'commodityValues', 'marketCapacity', 'binComposition']   // Specify which tables; null returns all  
+                    }
+                }
+            )
+            .then(response => response.json() )
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
