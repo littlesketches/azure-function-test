@@ -284,10 +284,10 @@
     <script>
         // General page setup
         const settings = {
-            title: `Azure function test page `,
-            description: ``,
-            bannerImg: `RV_Website_Hero Image.png`,
-            hubSection: `Name of data hub section`
+            title:          `Azure function test page `,
+            description:    ``,
+            bannerImg:      `RV_Website_Hero Image.png`,
+            hubSection:     `Name of data hub section`
         }
 
         // Set title and subtitle and banner image
@@ -311,18 +311,17 @@
 
 
         async function fetchData(url){
-            console.log(url)
-            return fetch(url, {
-                    method:         'POST',                     // *GET, POST, PUT, DELETE, etc.
-                    mode:           'cors',                     // no-cors, *cors, same-origin
-                    cache:          'default',                 // *default, no-cache, reload, force-cache, only-if-cached
-                    credentials:    'same-origin',             // include, *same-origin, omit
+
+            return fetch(url, {     // Default settings
+                    method:         'POST',                    
+                    mode:           'cors',                    
+                    cache:          'default',               
+                    credentials:    'same-origin',             
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Credentials': true
+                        'Content-Type':     'application/json'
                     },
-                    body:{
-                        tables:   ['mrfOutput', 'materialsVicExport', 'commodityValues', 'marketCapacity', 'binComposition']   // Specify which tables; null returns all  
+                    body:{          // Specify param of array of table names. Handled as request body by Azure Function that will default to all table names (listed in the Azure Function, if not specified  here 
+                        tables:     ['mrfOutput', 'materialsVicExport', 'commodityValues', 'marketCapacity', 'binComposition']   
                     }
                 }
             )
